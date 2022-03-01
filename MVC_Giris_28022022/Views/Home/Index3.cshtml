@@ -1,0 +1,90 @@
+﻿@using MVC_Giris_28022022.Library
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index3</title>
+</head>
+<body>
+    <div>
+
+        <style>
+            .yesil {
+                color: green
+            }
+
+            #text1 {
+                color: black
+            }
+
+            dic#text1 {
+                /*id si text1 olan herşey için geçerlidir*/
+            }
+
+            p.renk {
+                color: darkblue;
+                background-color: darkgray;
+                font: 15px;
+            }
+
+            div {
+                width: 400px;
+                height: 400px;
+                background-color: gray;
+                color: green;
+                text-align: center;
+            }
+
+                div > p {
+                    font-size: 20px;
+                    font-family: 'Comic Sans MS';
+                }
+            img{
+                height:100px;
+                width:100px;
+                position:center;
+            }
+
+        </style>
+
+        <asp:Button Text="Tıkla" />
+
+        <input type="text" name="text1" id="text1" class="yesil" />
+        <input type="button" value="Tıkla" class="yesil" />
+        <hr /><br />
+        <a href="https://www.google.com">Google git</a><br />
+        <a href="Index2">Index2 safasına git</a> <br /><br />
+
+        <button id="btn1" name="btn1" type="submit">Getir</button><br />
+
+        <img src="~/image/pngegg.png" />
+
+        <br />
+        @Html.ActionLink("Kategori sayfasına git", "Kategori")<br />
+        <br />
+        @Html.TextBox("text2", "Adınız")<br />
+        <br />
+        @Html.TextArea("textarea1", "Açıklama", 2, 20, null)
+        <br />
+        @Html.ActionLink("Index syafasına git", "Index", new { isim = "Meryem" },
+        new { title = "Index sayfasına yönledirir", @class = "yesil" })
+        <br />
+        @Html.Button("btn1", MyExtensions.ButonTip.button, "Gönder")
+
+
+    </div>
+
+    <p class="renk">Divler Dışında Paragraf</p>
+
+    <div>
+        <p>
+            MERHABA
+        </p>
+    </div>
+</body>
+</html>
